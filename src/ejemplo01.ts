@@ -12,7 +12,13 @@ class Vehiculo {
     getMarca(){
         return this._marca
     }
+    get marca(){
+        return this._marca
+    }
     setMarca(_marca: string){
+        this._marca = _marca
+    }
+    set marca (_marca: string){
         this._marca = _marca
     }
 }
@@ -21,5 +27,6 @@ let miVehiculo = new Vehiculo("1234ABC", "Opel")
 v1 = new Vehiculo("5678XYZ", "Renault")
 console.log(`La marca de v1 es: ${v1.getMarca()}`)
 v1.setMarca("Seat")
+v1.marca = "Maseratti"
 console.log(`La marca de v1 es: ${v1.getMarca()}`)
-console.log(`Los datos del vehículo son: Matrícula: ${miVehiculo.getMatricula()}, Marca: ${miVehiculo.getMarca()}.`)
+console.log(`Los datos del vehículo son: Matrícula: ${miVehiculo.getMatricula()}, Marca: ${miVehiculo.marca}.`)
